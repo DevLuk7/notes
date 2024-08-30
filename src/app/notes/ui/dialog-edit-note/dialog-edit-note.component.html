@@ -1,5 +1,14 @@
-<div class="flex justify-between">
+<div class="flex justify-between items-center">
   <h3 class="typo-heading-3xs">Edit Note</h3>
+  <button
+    type="button"
+    app-button
+    buttonType="cancel"
+    class="pr-0"
+    (click)="dialogRef.close()"
+  >
+    Cancel
+  </button>
 </div>
 
 <app-form-note

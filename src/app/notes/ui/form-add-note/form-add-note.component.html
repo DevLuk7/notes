@@ -1,8 +1,16 @@
-<div class="flex justify-between">
-  <div class="typo-body-m-bold">Add new note</div>
-  <button type="button" app-button buttonType="cancel" (click)="cancel.emit()">
-    Cancel
-  </button>
-</div>
+<div class="flex flex-col gap-2">
+  <div class="flex justify-between items-center">
+    <div class="typo-body-m-bold">Add new note</div>
+    <button
+      type="button"
+      app-button
+      buttonType="cancel"
+      class="pr-0"
+      (click)="cancel.emit()"
+    >
+      Cancel
+    </button>
+  </div>
 
-<app-form-note (submitForm)="submit($event)"></app-form-note>
+  <app-form-note (submitForm)="submit($event)"></app-form-note>
+</div>

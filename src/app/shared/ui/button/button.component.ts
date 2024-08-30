@@ -7,6 +7,9 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
+  host: {
+    class: 'px-4 py-2',
+  },
 })
 export class ButtonComponent {
   readonly buttonType = input<'primary' | 'secondary' | 'cancel'>('primary');

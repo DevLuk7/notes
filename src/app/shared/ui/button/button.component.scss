@@ -1,7 +1,6 @@
 @import '../../../../styles/typography-mixin.scss';
 
 :host {
-    @apply px-4 py-2;
     &.primary, &.secondary {
         @apply end-2.5 bottom-2.5  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm;
         @include typo-button();
