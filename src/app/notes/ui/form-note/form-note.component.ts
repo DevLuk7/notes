@@ -1,4 +1,12 @@
-import { Component, input, OnInit, output } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  input,
+  OnInit,
+  output,
+  viewChild,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputComponent } from 'src/app/shared/ui/input/input.component';
 import { ButtonComponent } from 'src/app/shared/ui/button/button.component';
@@ -31,10 +39,14 @@ const createNoteForm = () =>
   templateUrl: './form-note.component.html',
   styleUrl: './form-note.component.scss',
 })
-export class FormNoteComponent implements OnInit {
+export class FormNoteComponent implements OnInit, AfterViewInit {
   readonly initialValue = input<NoteFormValue>();
   readonly submitButtonText = input<string>('Add');
   readonly submitForm = output<NoteFormValue>();
+
+  readonly titleInput = viewChild('titleInput', {
+    read: ElementRef,
+  });
 
   readonly form = createNoteForm();
 
@@ -43,6 +55,10 @@ export class FormNoteComponent implements OnInit {
     if (initialValue) {
       this.form.patchValue(initialValue);
     }
+  }
+
+  ngAfterViewInit(): void {
+    this.titleInput()?.nativeElement.focus();
   }
 
   onSubmit() {

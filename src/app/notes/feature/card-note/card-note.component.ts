@@ -35,6 +35,7 @@ export class CardNoteComponent {
   showEditModal(note: Note) {
     const dialogRef = this.dialog.open(DialogEditNoteComponent, {
       data: { note },
+      autoFocus: 'input',
     });
 
     dialogRef.closed.pipe(filter((x) => !!x)).subscribe((note) => {
