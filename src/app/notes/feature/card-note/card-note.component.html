@@ -1,0 +1,17 @@
+<app-card class="w-full lg:w-auto" style="min-width: 300px">
+  <div class="flex flex-col gap-3">
+    <div class="flex justify-between">
+      <h3 class="typo-body-s-bold">{{ note().title }}</h3>
+      <div>
+        <button type="button" class="ml-2" (click)="showEditModal(note())">
+          <app-icon icon="edit"></app-icon>
+        </button>
+        <button type="button" class="ml-2" (click)="showDeleteModal(note())">
+          <app-icon icon="delete"></app-icon>
+        </button>
+      </div>
+    </div>
+    <p class="typo-body-s">{{ note().body }}</p>
+    <p class="typo-ui-text-s">{{ note().date | date : 'MMM d' }}</p>
+  </div>
+</app-card>

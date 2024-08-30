@@ -1,0 +1,6 @@
+@import '../../../../styles/typography-mixin.scss';
+
+:host {
+    @apply block w-full py-2 px-3 text-gray-900 border border-gray-300 rounded-lg bg-input-default focus:bg-input-active active:bg-input-active;
+    @include typo-body-m();
+}

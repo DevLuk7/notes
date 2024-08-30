@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+  <input
+    type="text"
+    app-input
+    placeholder="Your title..."
+    formControlName="title"
+  />
+  <div class="relative">
+    <textarea
+      type="text"
+      app-textarea
+      placeholder="Your note..."
+      formControlName="body"
+    ></textarea>
+    <button type="submit" app-button class="absolute bottom-4 right-4">
+      {{ submitButtonText() }}
+    </button>
+  </div>
+</form>

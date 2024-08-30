@@ -1,0 +1,30 @@
+@import './typography-mixin.scss';
+
+.typo-heading-3xs {
+    @include typo-heading-3xs();
+}
+
+.typo-body-m {
+    @include typo-body-m();
+}
+
+.typo-body-m-bold {
+    @include typo-body-m-bold();
+}
+
+.typo-body-s-bold {
+    @include typo-body-s-bold();
+}
+
+.typo-body-s {
+    @include typo-body-s();
+}
+
+.typo-ui-text-s {
+    @include typo-ui-text-s();
+}
+
+.typo-button {
+    @include typo-button();
+}
+

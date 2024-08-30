@@ -1,0 +1,10 @@
+@if (!showForm()) {
+<button type="button" app-button class="w-full" (click)="showForm.set(true)">
+  Add New
+</button>
+} @else {
+<app-form-add-note
+  (cancel)="showForm.set(false)"
+  (addNote)="addNote($event)"
+></app-form-add-note>
+}

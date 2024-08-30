@@ -1,0 +1,9 @@
+<div class="flex justify-between">
+  <h3 class="typo-heading-3xs">Edit Note</h3>
+</div>
+
+<app-form-note
+  [initialValue]="dialogData.note"
+  [submitButtonText]="'Update'"
+  (submitForm)="submit($event)"
+></app-form-note>

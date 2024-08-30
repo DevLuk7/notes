@@ -1,0 +1,22 @@
+@if (isLoaded()) {
+<div class="flex flex-col gap-4">
+  @if ( notes().length > 0 || showForm()) {
+  <app-add-new-note />
+  }
+  <div class="flex flex-wrap justify-evenly gap-6">
+    @for (note of notes(); track note.id; let idx = $index) {
+    <app-card-note
+      [note]="note"
+      [appDraggable]="idx"
+      (onDrop)="onDrop($event, idx)"
+    ></app-card-note>
+    } @empty { @if (showForm() === false && notes().length === 0) {
+    <app-no-notes-info
+      [areNotes]="areNotes()"
+      (addNewNote)="showForm.set(true)"
+    />
+    } }
+  </div>
+</div>
+
+}

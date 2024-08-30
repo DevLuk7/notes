@@ -1,0 +1,25 @@
+@import '../../../../styles/typography-mixin.scss';
+
+:host {
+    @apply px-4 py-2;
+    &.primary, &.secondary {
+        @apply end-2.5 bottom-2.5  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm;
+        @include typo-button();
+    }
+    &.primary {
+        @apply text-primary-text bg-primary-default hover:bg-primary-hover active:bg-primary-active focus:ring-primary-ring;
+    }
+    &.secondary {
+        @apply text-secondary-text bg-secondary-default hover:bg-secondary-hover active:bg-secondary-active border rounded-xl;
+        border-color: #BCBCBD;
+    }
+    &.cancel {
+        @include typo-body-s();
+        &:hover {
+            @include typo-body-s-bold();
+        }
+    }
+    &.cancel {
+        @apply text-cancel-text bg-cancel-default hover:text-cancel-text hover:bg-cancel-hover hover:underline underline-offset-4;
+    }
+} 

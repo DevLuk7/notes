@@ -1,0 +1,45 @@
+@mixin typo-heading-3xs {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #1B1C1E;
+}
+
+@mixin typo-body-m {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+}
+
+@mixin typo-body-m-bold {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.6px;
+}
+
+@mixin typo-body-s {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23.8px;
+    color: #3B3C3E;
+}
+
+@mixin typo-body-s-bold{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 23.8px;
+    color: #1B1C1E;
+}
+
+@mixin typo-ui-text-s {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.6px;
+    color: #5B5C5E;
+}
+
+@mixin typo-button {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}

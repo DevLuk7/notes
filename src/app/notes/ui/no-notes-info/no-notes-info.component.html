@@ -1,0 +1,21 @@
+<div class="p-9 flex flex-col justify-center items-center gap-4">
+  <app-icon icon="info" />
+  @if (areNotes()) {
+  <h2 class="typo-heading-3xs text-center">No search notes</h2>
+  } @else {
+  <h2 class="typo-heading-3xs text-center">No notes yet</h2>
+  <h4 class="typo-body-m text-center">
+    Add a note to keep track of your learnings.
+  </h4>
+  <div>
+    <button
+      type="button"
+      app-button
+      buttonType="secondary"
+      (click)="addNewNote.emit()"
+    >
+      <div class="flex"><app-icon icon="add-note" class="pr-2" /> Add Note</div>
+    </button>
+  </div>
+  }
+</div>
